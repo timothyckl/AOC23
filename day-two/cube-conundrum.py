@@ -16,10 +16,10 @@ with open('./input.txt', 'r') as file:
         if int(count) > max.get(color, 0):
           possible = False
 
-    power = 1
-    for v in counts.values():
-      power*=v
-    power_sum+=power
+    # power = 1
+    # for v in counts.values():
+    #  power*=v
+    power_sum += counts["red"] * counts["green"] * counts["blue"]
 
     if possible:
       sum+=int(game_id.split()[-1])
