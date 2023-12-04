@@ -35,12 +35,6 @@ def part_one():
 card_counts = {}
 total = 0
 
-def parse_card(card):
-    _, winning_nums, my_nums = re.split(r'\s*\|\s*|\s*:\s*', card)
-    winning_nums = re.split(r'\s+', winning_nums)
-    my_nums = re.split(r'\s+', my_nums)
-    return winning_nums, my_nums
-
 def calculate_cards(start_card: int, end_card: int, total: int = 0):
   for card_id in range(start_card, end_card):
     total += 1
